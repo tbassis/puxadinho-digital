@@ -30,10 +30,12 @@ headerTemplate.innerHTML = `
     align-items: center;
     flex-grow: 1;
     gap: 16px
+    padding-right: 32px;
   }
 
   h1 {
     letter-spacing: 0.5em;
+    padding-left: 32px;
   }
 
   a {
@@ -64,10 +66,21 @@ headerTemplate.innerHTML = `
     width: 100%; 
     left: 0; 
   }
+
+  @media (max-width: 1090px) {
+    h1 {
+      font-size: medium;
+      padding-left: 16px;
+    }
+    nav {
+      padding-right: 16px;
+    }
+    a {
+      display: none;
+    }
+  }
 </style>
 `
-
-const paddingX = "32px";
 
 // create a header class, and clone the content of the template into it
 // add an observer to make the component size responsive
@@ -81,8 +94,6 @@ class navbar extends HTMLElement {
       for (let entry of entries) {
         const { width } = entry.contentRect;
         this.style.width = `${width}px`; // Define a largura do Custom Element
-        this.style.paddingLeft = paddingX;
-        this.style.paddingRight = paddingX;
       }
     });
 
@@ -91,7 +102,7 @@ class navbar extends HTMLElement {
       resizeObserver.observe(this.parentElement);
     }
 
-    this.shadowRoot.appendChild(headerTemplate.content.cloneNode(false))
+    this.shadowRoot.appendChild(headerTemplate.content.cloneNode(true))
   }
 }
 
