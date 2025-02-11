@@ -6,7 +6,7 @@ headerTemplate.innerHTML = `
   <h1>Puxadinho Digital</h1>
   <nav>
     <a href="index.html" data-lang="pt-BR">Inicio</a>
-    <a href="" data-lang="pt-BR">Fotos</a>
+    <a href="photos.html" data-lang="pt-BR">Fotos</a>
     <a href="about.html" data-lang="pt-BR">Sobre</a>
     <a href="" data-lang="pt-BR">Blog</a>
     <a href="" data-lang="pt-BR">Contato</a>
