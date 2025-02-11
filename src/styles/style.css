@@ -1,0 +1,31 @@
+.page-content {
+  max-width: 800px;
+  height: 100%;
+}
+
+.page-content-manifesto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.manifesto-title {
+  text-align: center;
+  font-size:x-large;
+  font-weight:800;
+  margin-bottom: 32px;
+}
+
+.manifesto-subtitle {
+  margin-top: 16px;
+  font-size: large;
+  font-weight: 600;
+  text-align: left;
+}
+
+.manifesto-text {
+  margin: 12px 0px 12px 0px;
+  font-weight: 400;
+  text-align: justify;
+}

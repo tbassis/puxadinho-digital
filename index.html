@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <link rel="stylesheet" type="text/css" href="style.css" title="General Style Sheet">
-    <script src="components/header.js" type="text/javascript" defer></script>
-    <script src="components/footer.js" type="text/javascript" defer></script>
-    <title>Tulio Website Homepage</title>
-  </head>
-  <body>
-    <header-component></header-component>
-    <main id="app">
-      <section>
-        <p>meu website</p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Puxadinho Home</title>
+
+  <link rel="stylesheet" type="text/css" href="src/styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+</head>
+
+<body>
+  <header>
+    <navbar-component></navbar-component>
+  </header>
+  <main>
+    <article class="page-content">
+      <section class="page-content-manifesto">
+        <h1 class="manifesto-title" data-lang="pt-BR">MANIFESTO PUXADINHO DIGITAL</h1>
+        <p class="manifesto-text" data-lang="pt-BR">Me chamo Túlio e comecei a desenvolver este site em 2025 após algumas
+          reflexões que me tomaram ao longo do ano de 2024 sobre a maneira que estamos utilizando a internet.</p>
+        <p class="manifesto-text" data-lang="pt-BR">As redes sociais são grandes feudos que com seus muros nos colocam em bolhas e nos faz de
+          despossídos a partir do momento que não temos controle de como elas vão gerir nossas informações </p>
+        <p class="manifesto-text" data-lang="pt-BR">Meus objetivos com este site são:</p>
+        <h2 class="manifesto-subtitle" data-lang="pt-BR">1. Projeto de estudo de desenvolvimento web</h2>
+        <p class="manifesto-text" data-lang="pt-BR">
+          Optei por não utilizar nenhuma
+          dependência e escrever todo o código que inicialmente é de uma página web estática mas que pode acabar
+          evoluindo para algo que eu não tenho definido. A ideia realmente é estudar e sair implementando e testando,
+          sair das amarras que os frameworks de JavaScript tem colocado muitos desenvolvedores.
+        </p>
+        <h2 class="manifesto-subtitle" data-lang="pt-BR">2. Compartilhamento </h2>
+        <p class="manifesto-text" data-lang="pt-BR">
+          2. Compartilhar coisas que eu fiz, coisas que eu gosto ou coisas que podem ser relevantes sobre mim. Um
+          portfólio profissional do meu trabalho como desenvolvedor de software, artigos diversos sobre temas
+          profissionais ou de amores pessoais, projetos fotográficos e outras coisas que eu não esteja vislumbrando no
+          momento.
+        </p>
+        <h2 class="manifesto-subtitle" data-lang="pt-BR">3. Ser um espaço digital meu sem fronteiras delimitadas por empresas</h2>
+        <p class="manifesto-text" data-lang="pt-BR">
+          3. Manter um espaço digital público onde eu sou o dono do que eu produzi. Acessar a internet tem sido muito
+          vinculado a acessar redes sociais ou plataformas, espaços que pertencem a empresas que não querem ter
+          responsabilidade com as pessoas ou transparência com relação as regras que regem seus espaços. Não somos donos
+          do que compramos, não somos donos do que postamos e nossas vida digital nesses espaços são regidas sem o menor
+          respeito por partes dessas empresas nos transformando em algo que eu chamo de Despossuídos Digitais (link para
+          o meu artigo).
+        </p>
       </section>
-    </main>
+    </article>
+  </main>
+  <footer>
     <footer-component></footer-component>
-    <!-- <script src="js/app.js"></script> -->
-  </body>
+  </footer>
+  <!-- <script src="js/app.js"></script> -->
+  <script src="./src/components/navbar.js" type="text/javascript" defer></script>
+  <script src="./src/components/footer.js" type="text/javascript" defer></script>
+</body>
+
 </html>
