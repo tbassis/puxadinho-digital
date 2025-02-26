@@ -1,20 +1,22 @@
 // create an HTML template element
 const headerTemplate = document.createElement('template')
+const style = document.createElement("style");
 
 headerTemplate.innerHTML = `
 <div class="nav-container">
   <h1>Puxadinho Digital</h1>
   <nav>
-    <a href="index.html" data-lang="pt-BR">Inicio</a>
-    <a href="photos.html" data-lang="pt-BR">Fotos</a>
-    <a href="about.html" data-lang="pt-BR">Sobre</a>
-    <a href="blog.html" data-lang="pt-BR">Blog</a>
-    <a href="contact.html" data-lang="pt-BR">Contato</a>
+    <a id="nav-link-index" href="index.html" data-lang="pt-BR">Inicio</a>
+    <a id="nav-link-phoyos" href="photos.html" data-lang="pt-BR">Fotos</a>
+    <a id="nav-link-about" href="about.html" data-lang="pt-BR">Sobre</a>
+    <a id="nav-link-blog" href="blog.html" data-lang="pt-BR">Blog</a>
+    <a id="nav-link-contact" href="contact.html" data-lang="pt-BR">Contato</a>
   </nav>
 </div>
+`
 
-<style>
-  .nav-container {
+style.textContent = `
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,14 +81,23 @@ headerTemplate.innerHTML = `
       display: none;
     }
   }
-</style>
 `
+
 
 // create a header class, and clone the content of the template into it
 // add an observer to make the component size responsive
 class navbar extends HTMLElement {
+  static observedAttributes = ["page"];
+
   constructor() {
+    // Always call super first in constructor
     super()
+    console.log("entroiu construtor");
+  }
+
+  connectedCallback() {
+    console.log("Custom element added to page.");
+    // Create a shadow root
     this.attachShadow({ mode: 'open' })
 
     // this observer will react according to the size of the parent component
@@ -102,7 +113,23 @@ class navbar extends HTMLElement {
       resizeObserver.observe(this.parentElement);
     }
 
+    // Attach the created elements to the shadow dom
     this.shadowRoot.appendChild(headerTemplate.content.cloneNode(true))
+    this.shadowRoot.appendChild(style);
+  }
+
+  disconnectedCallback() {
+    console.log("Custom element removed from page.");
+  }
+
+  adoptedCallback() {
+    console.log("Custom element moved to new page.");
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(
+      `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+    );
   }
 }
 
