@@ -8,8 +8,8 @@ headerTemplate.innerHTML = `
     <a href="index.html" data-lang="pt-BR">Inicio</a>
     <a href="photos.html" data-lang="pt-BR">Fotos</a>
     <a href="about.html" data-lang="pt-BR">Sobre</a>
-    <a href="" data-lang="pt-BR">Blog</a>
-    <a href="" data-lang="pt-BR">Contato</a>
+    <a href="blog.html" data-lang="pt-BR">Blog</a>
+    <a href="contact.html" data-lang="pt-BR">Contato</a>
   </nav>
 </div>
 
