@@ -1,19 +1,103 @@
 <!DOCTYPE html>
-<html>
-  <head lang="en">
-    <link rel="stylesheet" type="text/css" href="style.css" title="General Style Sheet">
-    <script src="components/header.js" type="text/javascript" defer></script>
-    <script src="components/footer.js" type="text/javascript" defer></script>
-    <title>Tulio Website Homepage</title>
-  </head>
-  <body>
-    <header-component></header-component>
-    <main id="app">
-      <section>
-        <p>meu website</p>
+<html lang="pt-BR">
+
+<head>
+  <meta name="author" content="Tulio Assis" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Entrada do Puxadinho</title>
+  <meta name="description"
+    content="O Puxadinho digital é um projeto meu (Túlio Assis) para fins de estudo e compartilhamento de qualquer coisa que eu produza
+     e gostaria que outras pessoas tivessem acesso. Nesta página detalho melhor meus objetivos com esse site. Espero que gostem." />
+
+  <!-- The Open Graph protocol enables any web page to become a rich object in a social graph https://ogp.me/ -->
+  <meta property="og:title" content="Entrada do Puxadinho" />
+  <meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png" />
+  <meta property="og:description" content="O Puxadinho digital é um projeto meu (Túlio Assis) para fins de estudo e compartilhamento de qualquer coisa que eu produza
+  e gostaria que outras pessoas tivessem acesso. Nesta página detalho melhor meus objetivos com esse site. Espero que gostem."/>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.puxadinho.com.br" />
+
+  <link rel="icon" type="image/png" sizes="60x60" href="/favicon.png" />
+
+  <link rel="stylesheet" type="text/css" href="src/styles/reset.css" />
+  <link rel="stylesheet" type="text/css" href="src/styles/style.css" />
+</head>
+
+<body>
+  <header>
+    <navbar-component page="index"></navbar-component>
+  </header>
+  <main>
+    <article class="page-content">
+      <section class="page-content-manifesto">
+        <h1 class="manifesto-title" lang="pt">MANIFESTO PUXADINHO DIGITAL</h1>
+
+        <p class="manifesto-text" lang="pt">Nossa relação com o mundo digital tem se
+          tornado bastante limitada e limitante. Conectados 24/7 por meio de dispositivos vigilantes e controlados por
+          algoritmos condicionantes, se utilizando de
+          nossas fraquezas humanas para nos manter vidrados olhando para uma vitrine. As interações se dão em feudos
+          controlados
+          por Big Techs fazem os espaços serem mediados pelo consumo. O usuário fica ali consumindo passivamente o
+          "conteúdo" servido por um
+          algoritmo e produzido por pessoas que estão alí muito provavelmente querendo vender alguma coisa.
+        </p>
+
+        <p class="manifesto-text" lang="pt">Comecei a desenvolver este site em 2025 como uma
+          forma de
+          estudar desenvolvimento web escrevendo todo o código (sem dependências) e de me colocar nesse espaço
+          digital para além de softwares conhecidos como Redes Sociais.
+        </p>
+
+        <p class="manifesto-text" lang="pt"> Aqui dentro eu não pretendo criuar um novo avatar de mim mesmo,
+          exibindir anúncios para você comprar ou consumir coisas ou rastrear sua navegação.</p>
+
+        <p class="manifesto-text" lang="pt">Como o nome propões esse é um espaço digital onde eu pretendo
+          guardar algumas coisas que me relaciono de alguma maneira e que pode ser interessante para outras pessoas
+          também. É um espaço digital sem os limites impostos pelos donos da internet. Meus objetivos com este site são:
+        </p>
+
+        <h2 class="manifesto-subtitle" lang="pt">1. Estudar desenvolvimento web</h2>
+
+        <p class="manifesto-text" lang="pt">
+          Optei por não utilizar nenhuma
+          dependência e escrever todo o código que inicialmente é de uma página web estática mas que pode acabar
+          evoluindo para algo que eu não tenho definido. A ideia realmente é estudar e sair implementando e testando,
+          sair das amarras que os frameworks de JavaScript tem colocado muitos desenvolvedores.
+        </p>
+
+        <h2 class="manifesto-subtitle" lang="pt">2. Compartilhar pensamentos, imagens e conhecimentos
+        </h2>
+
+        <p class="manifesto-text" lang="pt">
+          2. Compartilhar coisas que eu fiz, coisas que eu gosto ou coisas que podem ser relevantes sobre mim. Um
+          portfólio profissional do meu trabalho como desenvolvedor de software, artigos diversos sobre temas
+          profissionais ou de amores pessoais, projetos fotográficos e outras coisas que eu não esteja vislumbrando no
+          momento.
+        </p>
+
+        <h2 class="manifesto-subtitle" lang="pt">3. Ser um espaço digital meu sem fronteiras delimitadas por
+          empresas</h2>
+
+        <p class="manifesto-text" lang="pt">
+          3. Manter um espaço digital público onde eu sou o dono do que eu produzi. Acessar a internet tem sido muito
+          vinculado a acessar redes sociais ou plataformas, espaços que pertencem a empresas que não querem ter
+          responsabilidade com as pessoas ou transparência com relação as regras que regem seus espaços. Não somos donos
+          do que compramos, não somos donos do que postamos e nossas vida digital nesses espaços são regidas sem o menor
+          respeito por partes dessas empresas nos transformando em algo que eu chamo de Despossuídos Digitais (link para
+          o meu artigo).
+        </p>
       </section>
-    </main>
+    </article>
+  </main>
+  <footer>
     <footer-component></footer-component>
-    <!-- <script src="js/app.js"></script> -->
-  </body>
+  </footer>
+  <script src="./src/pages.js" type="text/javascript" defer></script>
+  <script src="./src/components/navbar.js" type="text/javascript" defer></script>
+  <script src="./src/components/footer.js" type="text/javascript" defer></script>
+</body>
+
 </html>
