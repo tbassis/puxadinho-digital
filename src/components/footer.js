@@ -29,20 +29,9 @@ class footer extends HTMLElement {
 		super()
 		this.attachShadow({ mode: 'open' })
 
-		// This observer will react according to the size of the parent component
-		const resizeObserver = new ResizeObserver(entries => {
-			for (let entry of entries) {
-				const { width } = entry.contentRect;
-				this.style.width = `${width}px`; // Define a largura do Custom Element
-				this.style.paddingLeft = paddingXFooter;
-				this.style.paddingRight = paddingXFooter;
-			}
-		});
+		this.style.paddingLeft = paddingXFooter;
+		this.style.paddingRight = paddingXFooter;
 
-		// Initiate the father component observer
-		if (this.parentElement) {
-			resizeObserver.observe(this.parentElement);
-		}
 		this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true))
 	}
 
