@@ -1,4 +1,5 @@
-// create an HTML template element
+// crafted by Tulio Assis
+
 const headerTemplate = document.createElement('template')
 const style = document.createElement("style");
 
@@ -99,21 +100,6 @@ class navbar extends HTMLElement {
     // Create a shadow root
     this.attachShadow({ mode: 'open' })
 
-    // this observer will react according to the size of the parent component
-    // const resizeObserver = new ResizeObserver(entries => {
-    //   for (let entry of entries) {
-    //     // console.log(entry.contentRect);
-        
-    //     const { width } = entry.contentRect;
-    //     this.style.width = `${width}px`; // Define a largura do Custom Element
-    //   }
-    // });
-
-    // initiate the father component observer
-    // if (this.parentElement) {
-    //   resizeObserver.observe(this.parentElement);
-    // }
-
     // Attach the created elements to the shadow dom
     this.shadowRoot.appendChild(headerTemplate.content.cloneNode(true))
     this.shadowRoot.appendChild(style);
@@ -128,10 +114,7 @@ class navbar extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    this.style.width = `${newValue}px`; // Define a largura do Custom Element
-    console.log(
-      `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
-    );
+    this.style.width = `${newValue}px`; // set the width of the custom element
   }
 }
 
