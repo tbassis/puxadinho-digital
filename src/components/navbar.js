@@ -7,7 +7,7 @@ headerTemplate.innerHTML = `
   <h1>Puxadinho Digital</h1>
   <nav>
     <a id="nav-link-index" href="index.html" data-lang="pt-BR">Inicio</a>
-    <a id="nav-link-phoyos" href="photos.html" data-lang="pt-BR">Fotos</a>
+    <a id="nav-link-photos" href="photos.html" data-lang="pt-BR">Fotos</a>
     <a id="nav-link-about" href="about.html" data-lang="pt-BR">Sobre</a>
     <a id="nav-link-blog" href="blog.html" data-lang="pt-BR">Blog</a>
     <a id="nav-link-contact" href="contact.html" data-lang="pt-BR">Contato</a>
@@ -83,11 +83,10 @@ style.textContent = `
   }
 `
 
-
 // create a header class, and clone the content of the template into it
 // add an observer to make the component size responsive
 class navbar extends HTMLElement {
-  static observedAttributes = ["page"];
+  static observedAttributes = ["page", "page-width"];
 
   constructor() {
     // Always call super first in constructor
@@ -101,17 +100,19 @@ class navbar extends HTMLElement {
     this.attachShadow({ mode: 'open' })
 
     // this observer will react according to the size of the parent component
-    const resizeObserver = new ResizeObserver(entries => {
-      for (let entry of entries) {
-        const { width } = entry.contentRect;
-        this.style.width = `${width}px`; // Define a largura do Custom Element
-      }
-    });
+    // const resizeObserver = new ResizeObserver(entries => {
+    //   for (let entry of entries) {
+    //     // console.log(entry.contentRect);
+        
+    //     const { width } = entry.contentRect;
+    //     this.style.width = `${width}px`; // Define a largura do Custom Element
+    //   }
+    // });
 
     // initiate the father component observer
-    if (this.parentElement) {
-      resizeObserver.observe(this.parentElement);
-    }
+    // if (this.parentElement) {
+    //   resizeObserver.observe(this.parentElement);
+    // }
 
     // Attach the created elements to the shadow dom
     this.shadowRoot.appendChild(headerTemplate.content.cloneNode(true))
@@ -127,6 +128,7 @@ class navbar extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
+    this.style.width = `${newValue}px`; // Define a largura do Custom Element
     console.log(
       `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
     );
