@@ -7,10 +7,10 @@ headerTemplate.innerHTML = `
 <div class="nav-container">
   <h1>Puxadinho Digital</h1>
   <nav>
-    <a id="nav-link-index" href="index.html" data-lang="pt-BR">Inicio</a>
+    <a id="nav-link-index" href="index.html" data-lang="pt-BR">Entrada</a>
+    <a id="nav-link-blog" href="blog.html" data-lang="pt-BR">Biblioteca</a>
     <a id="nav-link-photos" href="photos.html" data-lang="pt-BR">Fotos</a>
     <a id="nav-link-about" href="about.html" data-lang="pt-BR">Sobre</a>
-    <a id="nav-link-blog" href="blog.html" data-lang="pt-BR">Blog</a>
     <a id="nav-link-contact" href="contact.html" data-lang="pt-BR">Contato</a>
   </nav>
 </div>
@@ -21,9 +21,7 @@ style.textContent = `
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
-
     font-family: var(--font-dm-sans);
   }
 
@@ -71,15 +69,21 @@ style.textContent = `
   }
 
   @media (max-width: 1090px) {
+    .nav-container {
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 0px;
+    }
     h1 {
       font-size: medium;
       padding-left: 16px;
     }
     nav {
-      padding-right: 16px;
+      padding-right: 0px;
     }
     a {
-      display: none;
+      letter-spacing: 0.1em;
+      padding: 5px;
     }
   }
 `

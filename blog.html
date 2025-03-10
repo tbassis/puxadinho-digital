@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="en">
+<head lang="pt-BR">
+  <meta name="author" content="Tulio Assis" />
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Blog do Puxadinho</title>
+  <title>Escritório do Puxadinho</title>
+  <meta name="description"
+    content="No escritório do puxadinho estão textos escritos por mim relacionados a 
+    diversos temas do meu interesse. Tenho gostado cada vez mais de escrever sobre o que sinto, 
+    experiencio e aprendo e aqui estão algumas coisas que gostei e acredito que outras pessoas possam gostar também." />
 
-  <link rel="stylesheet" type="text/css" href="src/styles/reset.css">
-  <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+  <!-- The Open Graph protocol enables any web page to become a rich object in a social graph https://ogp.me/ -->
+  <meta name="og:title" content="Escritório do Puxadinho" />
+  <meta name="og:description" content="No escritório do puxadinho estão textos escritos por mim relacionados a 
+    diversos temas do meu interesse. Tenho gostado cada vez mais de escrever sobre o que sinto, 
+    experiencio e aprendo e aqui estão algumas coisas que gostei e acredito que outras pessoas possam gostar também." />
+  <meta name="og:image" content="https://developer.mozilla.org/mdn-social-share.png" />
+  <meta name="og:type" content="website">
+  <meta name="og:url" content="https://www.puxadinho.com.br/blog" />
+
+  <link rel="icon" type="image/png" sizes="60x60" href="/favicon.png" />
+
+  <link rel="stylesheet" type="text/css" href="src/styles/reset.css" />
+  <link rel="stylesheet" type="text/css" href="src/styles/style.css" />
 </head>
 
 <body>
   <header>
     <navbar-component page="blog"></navbar-component>
   </header>
-  <main id="app">
-    <article class="page-content">
-      <section>
-        <p>Página Blog do Website</p>
-      </section>
+  <main>
+    <article class="page-content-blog">
+      <h1 class="manifesto-title" lang="pt">Artigos</h1>
+      <blog-post-list-component></blog-post-list-component>
     </article>
   </main>
   <footer>
     <footer-component></footer-component>
   </footer>
-  <script src="./src/pages.js" type="text/javascript" defer></script>
+  <script src="./src/page-size-observer.js" type="text/javascript" defer></script>
   <script src="./src/components/navbar.js" type="text/javascript" defer></script>
   <script src="./src/components/footer.js" type="text/javascript" defer></script>
+  <script src="./src/components/blog-post-list-component.js" type="text/javascript" defer></script>
 </body>
 
 </html>

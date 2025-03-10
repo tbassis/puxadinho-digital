@@ -15,7 +15,7 @@ video {
 /* HTML5 display-role reset for older browsers */
 
 header {
-    height: 5em; /* Altura fixa */
+    min-height: 5em; /* Altura fixa */
     background-color: whitesmoke;
     color: black;
     display: flex;
