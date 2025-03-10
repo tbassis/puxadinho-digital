@@ -21,9 +21,7 @@ style.textContent = `
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
-
     font-family: var(--font-dm-sans);
   }
 
@@ -71,15 +69,21 @@ style.textContent = `
   }
 
   @media (max-width: 1090px) {
+    .nav-container {
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 0px;
+    }
     h1 {
       font-size: medium;
       padding-left: 16px;
     }
     nav {
-      padding-right: 16px;
+      padding-right: 0px;
     }
     a {
-      display: none;
+      letter-spacing: 0.1em;
+      padding: 5px;
     }
   }
 `
