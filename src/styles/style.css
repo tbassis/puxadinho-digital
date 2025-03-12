@@ -1,33 +1,4 @@
-.page-content {
-  max-width: 800px;
-  height: 100%;
-}
-
-.page-content-manifesto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 32px 0px 32px 0px;
-  @media (max-width: 1090px) {
-    padding: 32px 16px;
-  }
-}
-
-.page-content-blog {
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  height: 100%;
-  padding: 32px 0px 32px 0px;
-
-  @media (max-width: 1090px) {
-    padding: 32px 16px 32px 16px;
-  }
-}
-
-.manifesto-title {
+h1 {
   text-align: center;
   font-size:x-large;
   font-weight:800;
@@ -38,15 +9,30 @@
   }
 }
 
-.manifesto-subtitle {
+h2 {
   margin-top: 16px;
   font-size: large;
   font-weight: 600;
   text-align: left;
 }
 
-.manifesto-text {
+p {
   margin: 12px 0px 12px 0px;
   font-weight: 400;
   text-align: justify;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+
+  height: 100%;
+  max-width: 800px;
+
+  padding: 32px 0px;
+
+  @media (max-width: 1090px) {
+    padding: 32px 16px;
+  }
 }
