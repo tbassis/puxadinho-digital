@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="en">
-  <title>Sobre o Puxadinho</title>
+<head lang="pt-BR">
+  <meta name="author" content="Tulio Assis" />
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sobre o Puxadinho</title>
+  <meta name="description" content="Página com informações sobre o website e seu desenvolvedor." />
+
+  <meta name="og:title" content="Sobre o Puxadinho" />
+  <meta name="og:description" content="Página com informações sobre o website e seu desenvolvedor." />
+  <meta name="og:image" content="https://developer.mozilla.org/mdn-social-share.png" />
+  <meta name="og:type" content="website" />
+  <meta name="og:url" content="https://www.puxadinho.com.br/about" />
+
+  <link rel="icon" type="image/png" sizes="60x60" href="/favicon.png" />
 
   <link rel="stylesheet" type="text/css" href="src/styles/reset.css">
   <link rel="stylesheet" type="text/css" href="src/styles/style.css">
@@ -16,16 +27,55 @@
     <navbar-component page="about"></navbar-component>
   </header>
   <main>
-    <article class="page-content">
+    <article class="page-container">
+      <h1 lang="pt-BR">Sobre o Puxadinho</h1>
       <section>
-        <p>Página Sobre o Website</p>
+        <h2 lang="pt-BR">O que este website não é</h2>
+        <p lang="pt-BR">Tenho algumas ideias sobre o que é este espaço, ainda estou pensando e maturando as ideias.</p>
+        <p lang="pt-BR">No momento atual tenho mais certeza sobre o que este espaço não é:</p>
+        <ol>
+          <li lang="pt-BR">Aqui não é um espaço de publicidade</li>
+          <li lang="pt-BR">Aqui não pretendo restrear seu uso ou coletar informações de quem acessa este espaço.</li>
+          <li lang="pt-BR">Aqui não pretendo pensar em primeiro lugar no que as pessoas gostariam de ver aqui, vou colocar o que eu
+            acho que faz sentido pra mim</li>
+        </ol>
+      </section>
+      <section>
+        <h2 lang="pt-BR">O que pretende ser</h2>
+        <p lang="pt-BR">Esta é uma primeira versãao deste website, estou desenvolvendo ele no meutempo livre sem usar nenhuma
+          dependência. Pretendo inicialmente deixar ele leve e rápido</p>
+        <p lang="pt-BR">Isto é um repositório com textos, imagens e vídeos sobre coisas da minha vida e interesse que para mim fazem
+          sentido serem compartilhadas.</p>
+        <p lang="pt-BR">É também um lugar de aprendizado para mim e quem sabe para outras pessoas, quem sabé pra você que está lendo
+          isto neste exato momento.</p>
+      </section>
+      <section>
+        <h2 lang="pt-BR">Quem sou eu</h2>
+        <p lang="pt-BR">Me chamo Túlio, tenho 32 anos e sou um recifense bem orgulhoso da minha terra natal.</p>
+        <p lang="pt-BR">Gosto bastante de fotografia, mainha sempre gostou de fazer registros de amigos e família e cresci tendo
+          muito contato como fotografia enquanto uma ferramenta de registros afetivos. Em 2014 pude comprar minha 1ª
+          câmera digital, comprei para fazer registros de viagem mas fiquei muito interessado em aprender mais sobre o
+          funcionamento de uma câmera e de estudar a fotografia enquanto uma expressão artistica. Acho que enquanto
+          viver vou seguir fotografando.
+        </p>
+        <p lang="pt-BR">Sou bem aberto com relação ao meu gosto musical, me nego a falar que gosto de tudo pois não posso falar que
+          gosto do eu não conheço. Painho foi uma pessoa que sempre gostou bastante de escutar música e aprendi isso com
+          ele, fui exposto a muita coisa (principalmente rock dos anos 60 e 70). Me tornando adulto comecei a buscar
+          conhecer novos estilos, novos ritmos e tentar entender o motivo de não gostar de algumas coisas. Acho que
+          deveria ter aprendido a tocar algum instrumento e tenho certeza que no dia que aprender vou me arrepender de
+          ter demorado tanto.</p>
+        <p lang="pt-BR">Amo assistir filmes e ir ao cinema, coleciono ingressos dos filmes que assisti no cinema e o mais antigo que
+          tenho é do filme A Máscara do Zorro (1998) de uma sessão no cinema do shopping Tacaruna. Meus cinemas
+          favoritos são o da Fundação Joaquim Nabuco e São Luiz, vivi muitos momentos felizes nesses espaços e conheci
+          muitos filmes inesquecíveis.</p>
+        <p lang="pt-BR"></p>
       </section>
     </article>
   </main>
   <footer>
     <footer-component></footer-component>
   </footer>
-  <script src="./src/pages.js" type="text/javascript" defer></script>
+  <script src="./src/page-size-observer.js" type="text/javascript" defer></script>
   <script src="./src/components/navbar.js" type="text/javascript" defer></script>
   <script src="./src/components/footer.js" type="text/javascript" defer></script>
 </body>
