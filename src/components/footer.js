@@ -5,7 +5,7 @@ const footerTemplate = document.createElement('template')
 const copyright = 'Tulio Assis © ' + new Date().getFullYear()
 
 footerTemplate.innerHTML = `
-<div>
+<div id="footer">
     <p>${copyright}</p>
     <p>Meu endereço</p>
 </div>

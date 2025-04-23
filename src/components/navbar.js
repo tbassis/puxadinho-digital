@@ -23,8 +23,11 @@ class navbar extends HTMLElement {
     this.attachShadow({ mode: 'open' })
 
     // Attach to the shadow tree the template and style element
-    this.shadowRoot.appendChild(navbarTemplate.content)
+    this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true))
     this.shadowRoot.appendChild(style);
+
+    console.log("navbar entrou na arvore");
+    
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -35,7 +38,7 @@ class navbar extends HTMLElement {
 
 // custom element layout
 navbarTemplate.innerHTML = `
-<div class="nav-container">
+<div id="navbar-wrapper" class="nav-container">
   <h1>Puxadinho Digital</h1>
   <nav>
     <a id="nav-link-index" href="index.html" data-lang="pt-BR">Entrada</a>

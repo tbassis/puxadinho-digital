@@ -5,7 +5,7 @@
   <meta name="author" content="Tulio Assis" />
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Entrada do Puxadinho</title>
   <meta name="description"
@@ -15,8 +15,9 @@
   <!-- The Open Graph protocol enables any web page to become a rich object in a social graph https://ogp.me/ -->
   <meta property="og:title" content="Entrada do Puxadinho" />
   <meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png" />
-  <meta property="og:description" content="O Puxadinho digital é um projeto meu (Túlio Assis) para fins de estudo e compartilhamento de qualquer coisa que eu produza
-  e gostaria que outras pessoas tivessem acesso. Nesta página detalho melhor meus objetivos com esse site. Espero que gostem."/>
+  <meta property="og:description"
+    content="O Puxadinho digital é um projeto meu (Túlio Assis) para fins de estudo e compartilhamento de qualquer coisa que eu produza
+  e gostaria que outras pessoas tivessem acesso. Nesta página detalho melhor meus objetivos com esse site. Espero que gostem." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.puxadinho.com.br" />
 
@@ -27,11 +28,8 @@
 </head>
 
 <body>
-  <header>
-    <navbar-component page="index"></navbar-component>
-  </header>
-  <main>
-    <article class="page-container">
+  <page-layout-component>
+    <article slot="page-content" class="page-container">
       <section>
         <h1 lang="pt">Manifesto Puxadinho Digital</h1>
 
@@ -91,13 +89,12 @@
         </p>
       </section>
     </article>
-  </main>
-  <footer>
-    <footer-component></footer-component>
-  </footer>
+    <footer-component slot="footer-content"></footer-component>
+  </page-layout-component>
   <script src="./src/page-size-observer.js" type="text/javascript" defer></script>
   <script src="./src/components/navbar.js" type="text/javascript" defer></script>
   <script src="./src/components/footer.js" type="text/javascript" defer></script>
+  <script src="./src/components/page-layout-component.js" type="text/javascript" defer></script>
 </body>
 
 </html>
