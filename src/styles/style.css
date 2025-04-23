@@ -26,6 +26,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: top;
+  flex-grow: 1;
 
   height: 100%;
   max-width: 800px;
@@ -35,4 +36,8 @@ p {
   @media (max-width: 1090px) {
     padding: 32px 16px;
   }
+}
+
+.summary-container {
+  text-align: center;
 }
